@@ -81,6 +81,15 @@ body {
 
 @media (min-width : 1000px){
     /*Passage en grid sur desktop*/
+
+    body {
+        padding : 5% 10%;
+    }
+
+    .article{
+        --padding : 5%;
+        margin : 0;
+    }
     .container{
         display : grid;
         grid-template-columns: repeat(4,25%);
@@ -88,14 +97,23 @@ body {
         grid : 
             'article1 article1 article2 article3'
             'article4 article5 article5 article3';
+        gap : 10px;
+        max-width : 70%;
+        margin : auto;
     }
 
     .article.wide{
         grid-column : span 2;
+        max-width : 500px;
     }
 
     .article.long{
         grid-row : span 2;
+        max-width : 250px;
+    }
+
+    .article.small{
+        max-width : 250px;
     }
 
     .article.wide:first-child{
