@@ -85,6 +85,9 @@ body {
         display : grid;
         grid-template-columns: repeat(4,25%);
         grid-template-rows: repeat(2,50%);
+        grid : 
+            'article1 article1 article2 article3'
+            'article4 article5 article5 article3';
     }
 
     .article.wide{
@@ -95,9 +98,29 @@ body {
         grid-row : span 2;
     }
 
+    .article.wide:first-child{
+        grid-area: article1;
+    }
+
+    .article.small:first-child{
+        grid-area: article2;
+    }
+
+    .article.long{
+        grid-area: article3;
+    }
+
+    .article.small:last-child{
+        grid-area: article4;
+    }
+
+    .article.wide:last-child{
+        grid-area: article5;
+    }
+
     /*On réorganise la grid*/
 
-    .article.wide:first-child{
+    /* .article.wide:first-child{
         order : 0;
     }
 
@@ -115,11 +138,6 @@ body {
 
     .article.wide:last-child{
         order : 4;
-    }
-
-    
-
- 
-
+    } */
     
 }
